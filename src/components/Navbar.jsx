@@ -20,7 +20,7 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="nav-brand">
-        <Link to="/"><h1>Binge Hub</h1></Link>
+        <Link to="/"><h1>🍿 Binge Hub</h1></Link>
         <Link to="/about" className="nav-link about-link" style={{ marginLeft: '1.5rem', marginTop: '0.3rem' }}>
            <FaInfoCircle style={{ marginRight: '0.3rem' }}/> About
         </Link>
