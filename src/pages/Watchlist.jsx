@@ -3,6 +3,7 @@ import { useAuth } from '../context/AuthContext';
 import { db } from '../firebase/config';
 import { collection, query, getDocs, orderBy } from 'firebase/firestore';
 import MovieCard from '../components/MovieCard';
+import SkeletonCard from '../components/SkeletonCard';
 import { Navigate } from 'react-router-dom';
 
 export default function Watchlist() {
@@ -34,7 +35,9 @@ export default function Watchlist() {
     <div className="watchlist-page">
       <h2 style={{fontSize: '2.5rem', marginBottom: '2rem'}}>My Watchlist ❤️</h2>
       {loading ? (
-        <div className="loading-state">Loading your favorites...</div>
+        <div className="grid">
+          {Array.from({ length: 8 }).map((_, i) => <SkeletonCard key={i} />)}
+        </div>
       ) : (
         <>
           <div className="grid">

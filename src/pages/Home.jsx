@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import MovieCard from '../components/MovieCard';
+import SkeletonCard from '../components/SkeletonCard';
 
 const API_KEY = '993f908fce73bd5b49717e2a319721db';
 const BASE_URL = 'https://api.themoviedb.org/3';
@@ -92,11 +93,13 @@ export default function Home() {
         {items.map((item, index) => (
           <MovieCard key={`${item.id}-${index}`} item={item} />
         ))}
-        {items.length === 0 && !loading && (
-          <div className="no-results">No movies or shows found.</div>
-        )}
+        {loading && Array.from({ length: 10 }).map((_, index) => (
+          <SkeletonCard key={`skeleton-${index}`} />
+        ))}
       </div>
-      {loading && <div className="loading-state">Loading amazing content...</div>}
+      {items.length === 0 && !loading && (
+        <div className="no-results">No movies or shows found.</div>
+      )}
     </>
   );
 }

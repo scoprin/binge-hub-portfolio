@@ -1,16 +1,55 @@
-# React + Vite
+# 🍿 Binge Hub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Binge Hub Preview](https://placehold.co/1200x630/FAF8F5/4A3F35?text=Binge+Hub+-+Your+Movie+Database)
 
-Currently, two official plugins are available:
+Binge Hub is a modern, full-stack React application that serves as the ultimate center for discovering, tracking, and discussing movies and TV shows. Powered by the TMDB API and Firebase, it features a sleek UI with dark mode, real-time community comments, and infinite scrolling.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+🌍 **Live Demo:** [https://binge-hub-portfolio.netlify.app](https://binge-hub-portfolio.netlify.app)
 
-## React Compiler
+## ✨ Key Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Extensive Database:** Fetches data for over 100,000+ movies and TV series using the live TMDB API.
+- **User Authentication:** Secure email/password login and registration powered by Google Firebase.
+- **Personal Watchlist:** Authenticated users can save their favorite shows and movies to a personal watchlist stored in Firestore.
+- **Community Comments:** Real-time commenting system on any movie or TV show detail page.
+- **Infinite Scrolling:** Seamlessly load more content as you scroll down the home feed.
+- **Dynamic Theming:** Built-in Dark Mode / Light Mode toggle with persistent local storage.
+- **Responsive Design:** Fully responsive layout ensuring an optimal viewing experience on desktops, tablets, and mobile devices.
+- **Skeleton Loaders:** Premium skeleton loading screens for improved perceived performance.
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend:** React 18, React Router DOM v6
+- **Backend & Database:** Firebase Authentication, Cloud Firestore
+- **Styling:** Vanilla CSS3 with CSS Variables & Flexbox/Grid
+- **Data Source:** The Movie Database (TMDB) API v3
+- **Deployment:** Netlify
+
+## 🚀 Running Locally
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/scoprin/binge-hub-portfolio.git
+   cd binge-hub-portfolio
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Set up Firebase**
+   - Create a project on [Firebase Console](https://console.firebase.google.com/)
+   - Enable Authentication (Email/Password) and Firestore Database
+   - Add your Firebase config to `src/firebase/config.js`
+
+4. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+
+## 🤝 Contributing
+Contributions, issues, and feature requests are welcome!
+
+## 📝 License
+This project is open source and available under the [MIT License](LICENSE).
