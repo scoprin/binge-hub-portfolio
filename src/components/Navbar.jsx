@@ -1,7 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useTheme } from '../context/ThemeContext';
-import { FaMoon, FaSun, FaHeart, FaUser, FaSignOutAlt } from 'react-icons/fa';
+import { FaMoon, FaSun, FaHeart, FaUser, FaSignOutAlt, FaInfoCircle } from 'react-icons/fa';
 
 export default function Navbar() {
   const { currentUser, logout } = useAuth();
@@ -21,6 +21,9 @@ export default function Navbar() {
     <nav className="navbar">
       <div className="nav-brand">
         <Link to="/"><h1>Binge Hub</h1></Link>
+        <Link to="/about" className="nav-link about-link" style={{ marginLeft: '1.5rem', marginTop: '0.3rem' }}>
+           <FaInfoCircle style={{ marginRight: '0.3rem' }}/> About
+        </Link>
       </div>
       <div className="nav-links">
         <button onClick={toggleTheme} className="icon-btn" title="Toggle Theme">

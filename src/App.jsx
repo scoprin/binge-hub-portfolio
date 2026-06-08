@@ -5,6 +5,7 @@ import Details from './pages/Details';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Watchlist from './pages/Watchlist';
+import About from './pages/About';
 import './index.css';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <div className="container">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
           <Route path="/details/:mediaType/:id" element={<Details />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
