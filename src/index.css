@@ -117,7 +117,6 @@ a { color: inherit; text-decoration: none; }
 .credits-section strong { color: var(--text-primary); font-weight: 600; }
 .trailer-container { margin-top: 2rem; position: relative; width: 100%; padding-bottom: 56.25%; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow); }
 .trailer-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-@media (max-width: 768px) { .detail-card { flex-direction: column; } .detail-poster { width: 100%; height: 400px; } .detail-info { padding: 2rem; } }
 
 /* Skeleton Loaders */
 .skeleton {
@@ -164,3 +163,23 @@ a { color: inherit; text-decoration: none; }
 .features-list li { color: var(--text-secondary); margin-bottom: 0.8rem; font-size: 1.1rem; display: flex; align-items: flex-start; gap: 0.5rem; }
 .features-list li strong { color: var(--text-primary); }
 .features-list li::before { content: "🎯"; flex-shrink: 0; }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .container { padding: 1rem; }
+  .navbar { flex-direction: column; gap: 1rem; padding: 1rem; }
+  .nav-links { flex-wrap: wrap; justify-content: center; gap: 0.8rem; }
+  .grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 1rem; }
+  .detail-card { flex-direction: column; }
+  .detail-poster { width: 100%; height: auto; aspect-ratio: 2/3; }
+  .detail-info { padding: 1.5rem; }
+  .title-row { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  .title-row h2 { font-size: 1.8rem; }
+  .about-content { padding: 1.5rem; }
+  .about-header h2 { font-size: 2rem; }
+  .auth-card { padding: 2rem 1.5rem; }
+  .category-filters { gap: 0.5rem; }
+  .filter-btn { padding: 6px 12px; font-size: 0.9rem; }
+  .card-content { padding: 0.8rem; }
+  .card-content h4 { font-size: 1rem; }
+}
